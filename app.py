@@ -19,15 +19,28 @@ st.set_page_config(
 # 모바일 반응형 CSS 추가
 st.markdown("""
 <style>
-    /* 제목 크기 조정 (모바일 반응형) */
+    /* 메인 제목 크기 조정 (모바일 반응형) */
     h1 {
         font-size: 1.8rem !important;
         line-height: 1.2 !important;
     }
     
-    /* 참고 자료 제목 크기 조정 */
+    /* h2 제목 크기를 h1과 비슷하게 조정 (입력정보, 생성된 블로그 글) */
+    h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* h3 제목 크기 조정 */
     h3 {
         font-size: 1.1rem !important;
+    }
+    
+    /* h4 제목 크기 조정 (참고 자료를 다른 입력들과 같은 크기로) */
+    h4 {
+        font-size: 0.875rem !important;
+        font-weight: 400 !important;
+        margin-bottom: 0.5rem !important;
     }
     
     /* 모바일에서 제목 더 작게 */
@@ -35,8 +48,14 @@ st.markdown("""
         h1 {
             font-size: 1.4rem !important;
         }
+        h2 {
+            font-size: 1.4rem !important;
+        }
         h3 {
             font-size: 1rem !important;
+        }
+        h4 {
+            font-size: 0.875rem !important;
         }
     }
 </style>
