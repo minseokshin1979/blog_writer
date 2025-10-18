@@ -1,0 +1,4 @@
+API키: AIzaSyC1DzM1t-gMMXZGy0Ugekg90ONIO6h2RS4
+이름: PaperSummary
+프로젝트명: projects/339800876889
+프로젝트번호: 339800876889

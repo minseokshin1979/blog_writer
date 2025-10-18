@@ -1,0 +1,106 @@
+첫 번째 prompt
+블로그 글을 써주는 프로그램을 만들어줘. 
+1) 입력1: 사용될 키워드 입력하면 해당 키워드 관련 글을 써줘
+2) 입력2: 작성자의 관점을 작성하면 이를 고려하여 키워드 관련된 글을 써줘
+3) 입력3: 글의 스타일을 입력받아 해당 스타일로 글을 써줘. (예: 친근하게, 진지하게, 정중하게, 20대를 위한, ...)
+4) 입력4: 참고할 기사 혹은 문서 링크. 기사는 웹 링크에서 텍스트를 읽고 문서는 text를 추출해줘. 파일 형식은 txt, pdf, hwp 3가지를 고려해줘.
+5) 출력: LLM API를 이용하여 위 입력 정보들을 바탕으로 생성된 글을 출력해줘. 복사하여 다른 곳에 붙여넣을 수 있거나 파일로 저장할 수 있게 해줘.
+
+Agent AI 동작
+1) requirements.txt 파일 생성 (필요한 패키지 정의)
+2) 파일 파서 모듈 작성 (txt, pdf, hwp)
+3) 웹 스크래퍼 모듈 작성
+4) LLM API 연동 모듈 작성
+5) Streamlit 메인 앱 작성
+6) README.md 작성
+
+완성되었습니다! 🎉
+블로그 글 작성 프로그램을 성공적으로 만들었습니다. 다음과 같은 파일들이 생성되었습니다:
+
+📂 생성된 파일
+1. app.py - Streamlit 기반 웹 인터페이스 (메인 애플리케이션)
+2. blog_generator.py - OpenAI API를 활용한 블로그 글 생성 모듈
+3. file_parser.py - 파일 파싱 모듈 (txt, pdf, hwp 지원)
+4. web_scraper.py - 웹 페이지에서 텍스트 추출 모듈
+5. requirements.txt - 필요한 Python 패키지 목록
+6. README.md - 사용 설명서
+7. .gitignore - Git 버전 관리용
+
+🚀 실행 방법
+1. 패키지 설치: pip install -r requirements.txt
+2. 애플리케이션 실행: streamlit run app.py
+3. 브라우저에서 사용: 
+- 자동으로 브라우저가 열립니다 (http://localhost:8501)
+- 사이드바에 OpenAI API 키를 입력하세요
+
+✨ 주요 기능
+✅ 키워드 입력 - 원하는 주제의 키워드로 글 작성
+✅ 관점 설정 - 작성자의 관점 반영 (초보자, 전문가 등)
+✅ 스타일 커스터마이징 - 친근하게, 진지하게, 정중하게 등
+✅ 참고 자료 활용 - 웹 링크에서 텍스트 추출 또는 파일 업로드 (txt, pdf, hwp)
+✅ 결과 저장 - 마크다운(.md) 또는 텍스트(.txt) 파일로 다운로드
+✅ 복사 기능 - 생성된 글을 바로 복사하여 사용 가능
+
+🎯 사용 예시
+1. 키워드: "ChatGPT 활용법"
+2. 관점: "직장인의 실무 관점에서"
+3. 스타일: "실용적이고 친근하게"
+4. 참고 자료: 관련 뉴스 기사 링크 또는 PDF 파일
+5. 생성 버튼 클릭!
+
+⚠️ 참고사항
+- OpenAI API 키가 필요합니다 (https://platform.openai.com/api-keys)
+- API 사용 시 요금이 부과될 수 있습니다
+- gpt-3.5-turbo, gpt-4, gpt-4-turbo-preview 모델 중 선택 가능
+
+이제 프로그램을 실행하여 AI가 작성하는 고품질 블로그 글을 만나보세요! 🎉
+
+두 번째 prompt
+1) http://localhost:8501 사이트에 연결할 수 없는 에러가 나와. 해결해줘. 
+2) open AI API가 아니고 구글 AI studio 사용하도록 해줘. Key는 'AIzaSyC1DzM1t-gMMXZGy0Ugekg90ONIO6h2RS4'
+
+requirements.txt를 Google AI Studio용으로 수정
+blog_generator.py를 Gemini API 사용하도록 수정
+app.py를 Google AI Studio용으로 수정
+Streamlit 실행 및 테스트
+
+
+완벽하게 해결되었습니다! 🎉
+✅ 완료된 작업
+1. Streamlit 실행 문제 해결
+-필요한 패키지를 모두 설치했습니다
+-Streamlit이 http://localhost:8501 에서 정상적으로 실행 중입니다
+-포트 확인 결과: 8501 포트가 LISTENING 상태입니다
+2. Google AI Studio API로 변경
+✅ OpenAI API → Google Gemini API로 완전히 변경
+✅ 제공하신 API 키가 기본값으로 설정되어 있습니다
+✅ 모델 선택 옵션도 Gemini 모델들로 변경:
+-gemini-pro (기본값)
+-gemini-1.5-pro
+-gemini-1.5-flash
+
+🚀 사용 방법
+1. 브라우저에서 접속: http://localhost:8501
+2. 프로그램 사용:
+-사이드바에 Google AI Studio API 키가 이미 입력되어 있습니다
+-키워드를 입력하세요 (예: "인공지능", "여행 팁")
+-관점, 스타일, 참고 자료를 선택적으로 입력
+-"블로그 글 생성" 버튼 클릭!
+3. 참고 자료 활용:
+-웹 링크: URL을 입력하고 "웹 내용 가져오기" 클릭
+-파일: txt, pdf, hwp 파일 업로드
+4. 결과 저장:
+생성된 글을 복사하거나
+마크다운(.md) 또는 텍스트(.txt) 파일로 다운로드
+
+📝 변경된 주요 파일
+requirements.txt - Google Gemini 라이브러리로 변경
+blog_generator.py - Gemini API 사용하도록 완전히 재작성
+app.py - Google AI Studio API 키 입력으로 변경
+README.md - 문서 업데이트
+이제 http://localhost:8501 에 접속하여 블로그 글 작성 프로그램을 사용하실 수 있습니다! 😊
+
+
+세 번째 prompt
+오류가 발생했습니다: 블로그 글 생성 오류: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+이걸 해결해줘
