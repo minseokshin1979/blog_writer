@@ -16,6 +16,32 @@ st.set_page_config(
     layout="wide"
 )
 
+# 모바일 반응형 CSS 추가
+st.markdown("""
+<style>
+    /* 제목 크기 조정 (모바일 반응형) */
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* 참고 자료 제목 크기 조정 */
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* 모바일에서 제목 더 작게 */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.4rem !important;
+        }
+        h3 {
+            font-size: 1rem !important;
+        }
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 def main():
     st.title("✍️ AI 블로그 글 작성기")
@@ -82,7 +108,7 @@ def main():
         )
         
         # 입력 4: 참고 자료
-        st.subheader("4️⃣ 참고 자료 (선택)")
+        st.markdown("#### 4️⃣ 참고 자료 (선택)")
         
         reference_type = st.radio(
             "참고 자료 타입",
